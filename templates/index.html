@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceofFy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <style>
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body
+  {
+    background-image: url("./car2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('car2.jpg');
+  background-size: cover;
+  }
+
+  .contact
+  {
+    position: relative;
+    min-height: 80vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .contact .title
+  {
+    max-width: 800px;
+    text-align: center;
+  }
+  .contact .title h1
+  {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+
+  }
+  .contact .title p
+  {
+
+    font-weight: 300;
+    color: #fff;
+
+  }
+  .container
+  {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .container .contactInfo
+  {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .container .contactInfo .box
+  {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+  }
+  .container .contactInfo .box .icon
+  {
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+  .container .contactInfo .box .text
+  {
+    display: flex;
+    margin-left: 22px;
+    font-size: 16px;
+    color:white;
+    flex-direction: column;
+    font-weight: 300;
+  }
+  .container .contactInfo .box .text h3
+  {
+
+    font-size: 26px;
+    font-weight: 500;
+    color:gold;
+  }
+  .contactForm
+  {
+    width:40%;
+    padding:40px;
+    background: #fff;
+
+  }
+  .contactForm h2
+  {
+    font-size: 30px;
+    color:#333;
+    font-weight: 500;
+
+  }
+  .contactForm .inputbox
+  {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+  }
+  .contactForm .inputbox input
+  {
+    width:100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 0px;
+    border-bottom: 2px solid #333;
+    outline: none;
+  }
+  .contactForm .inputbox span
+  {
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  .contactForm .inputbox input:focus~ span,
+  .contactForm .inputbox input:valid~ span
+  {
+    color:gold;
+    font-size: 15px;
+    transform: translateY(-17px);
+  }
+  #sub
+  {
+    width:100px;
+    height:40px;
+    background: gold;
+    color:white;
+    border:none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  @media (max-width:991px)
+  {
+    .contact
+    {
+      padding: 50px;
+    }
+    .container
+    {
+      flex-direction: column;
+    }
+    .container .contactInfo
+    {
+      margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm
+    {
+      width:100%;
+    }
+
+  }
+  </style>
+</head>
+
+<body>
+  <section class="contact">
+    <div class="title">
+      <h1>PriceofFy</h1>
+        <p>Get the best price for your car at the comfort from your home</p>
+    </div>
+    <div class="container">
+      <div class="contactInfo">
+
+        <div class="box">
+          <div class="icon"><i class="fas fa-search-location"></i></div>
+          <div class="text">
+            <h3>Address</h3>
+            <p>A-569 <br> gali no 15 1st floor <br> near Sharma Sweets </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon"><i class="fas fa-id-card"></i></div>
+          <div class="text">
+            <h3>E-mail</h3>
+            <p>deepanshugupta598@gmail.com <br>deepanshu19csu078@ncuindia.edu</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="icon"><i class="fas fa-envelope-square"></i></div>
+          <div class="text">
+            <h3>Phone</h3>
+            <p>77039629** </p>
+          </div>
+        </div>
+      </div>
+      <div class="contactForm">
+        <form action="{{ url_for('predict')}}" method="post">
+          <h2 class="center_heading">Enter Details Here</h2>
+
+          <div class="inputbox">
+            <input id="first" name="Year" type="text" required="required">
+            <span>Enter Year</span>
+          </div>
+
+          <div class="inputbox">
+            <input id="second" name="Present_Price" type="text" required="required">
+            <span>Showroom Price(In lakhs)</span>
+          </div>
+
+          <div class="inputbox">
+            <input id="third" name="Kms_Driven" type="text" required="required">
+            <span>Kilometers Drived</span>
+          </div>
+
+          <div class="inputbox">
+            <input input id="fourth" name="Owner" type="text" required="required">
+            <span>owners previously(0 or 1 or 3)</span>
+          </div>
+
+          <p class="center_heading">Fuel type</p><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Diesel">CNG</option>
+          </select>
+          <p class="center_heading">Dealer or Individual</p><br><select name="Seller_Type_Individual" id="resea" required="required">
+            <option value="Dealer">Dealer</option>
+            <option value="Individual">Individual</option>
+          </select>
+          <p class="center_heading">Transmission type</p><br><select name="Transmission_Mannual" id="research" required="required">
+            <option value="Mannual">Manual Car</option>
+            <option value="Automatic">Automatic Car</option>
+          </select>
+          <button id="sub" type="submit ">submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <h3 class="prediction_text_css text-center">{{ prediction_text }}</h3>
+
+
+</body>
+
+</html>
