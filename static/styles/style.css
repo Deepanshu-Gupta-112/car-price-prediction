@@ -9,7 +9,12 @@
   {
       background-size: cover;
   }
+.prediction_text_css{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
 
+}
   .contact
   {
     position: relative;
@@ -28,10 +33,19 @@
   }
   .contact .title h1
   {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
     color: #fff;
+    background-image: linear-gradient(to left, rgba(201, 15, 15, 0), rgb(170, 39, 39));
+    border-radius: 40px;
 
+
+  }
+  .title_text{
+    background-image: linear-gradient(to left, rgba(201, 15, 15, 0), rgb(233, 112, 31));
+    border-radius: 40px;
+    font-weight: 400;
+    padding: 3px 3px 3px 3px;
   }
   .contact .title p
   {
@@ -39,6 +53,10 @@
     font-weight: 300;
     color: #fff;
 
+  }
+  .contactInfo{
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(95, 121, 48));
+    border-radius: 40px;
   }
   .container
   {
